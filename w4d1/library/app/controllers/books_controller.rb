@@ -8,7 +8,6 @@ class BooksController < ApplicationController
   end
 
   def create
-    fail
     new_book = Book.new(book_params)
     new_book.save
     redirect_to(books_url)

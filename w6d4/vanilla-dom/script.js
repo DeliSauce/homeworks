@@ -29,15 +29,35 @@ document.addEventListener("DOMContentLoaded", () => {
     textInput.value = "";
   };
 
-  document.querySelectorAll("#favorite-form").forEach((button) => {
-    button.addEventListener("submit", addPlaces);
-  });
+  const submitFav = document.querySelector("#favorite-form");
+  submitFav.addEventListener("submit", addPlaces);
+  // document.querySelectorAll("#favorite-form").forEach((button) => {
+  //   button.addEventListener("submit", addPlaces);
+  // });
 
 
   // adding new photos
+  const showPhotoForm = (e) => {
+    const photoForm = document.querySelector(".photo-form-container");
+    photoForm.classList.toggle("hidden");
+  };
 
-  // --- your code here!
+  const photoFormButton = document.querySelector(".photo-show-button");
+  photoFormButton.addEventListener("click", showPhotoForm);
 
+  const addPhoto = (event) => {
+    event.preventDefault();
+    let ul = document.querySelector(".dog-photos");
+    let li = document.createElement('li');
+    let img = document.createElement('img');
+    img.src = document.querySelector(".photo-url-input").value;
+    // img.src = "http://i.imgur.com/T26TiZ1.jpg";
 
+    li.appendChild(img);
+    ul.appendChild(li);
+  };
+
+  const submitPhotoButton = document.querySelector(".photo-url-submit");
+  submitPhotoButton.addEventListener("click", addPhoto);
 
 });

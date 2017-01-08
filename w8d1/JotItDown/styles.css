@@ -1,0 +1,35 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.header-logins {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+}
+
+
+.hero-img {
+  width: 60px;
+  height: 60px;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.footer-left {
+
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+
+}
